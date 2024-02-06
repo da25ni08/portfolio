@@ -11,15 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('personal_data', function (Blueprint $table) {
+        Schema::create('skills', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('nombre');
-            $table->string('dirección');
-            $table->string('genre');
-            $table->integer('age');
-            $table->string('tel');
-            $table->string('description');
+            $table->string('name');
+            $table->integer('percentage');
+            $table->foreignId('personal_data_id');
+            $table->string('urlimg')->nullable();
         });
     }
 
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('personal_data');
+        Schema::dropIfExists('skills');
     }
 };
