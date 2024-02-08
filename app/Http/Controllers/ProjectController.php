@@ -20,10 +20,10 @@ class ProjectController extends Controller
         $proyectos_out = [];
 
         foreach ($categorias as $key => $categoria) {
-            $proyectos = DB::table('proyects')->select('*')->where('id', "=", $categoria->id);
-            array_push($proyectos_out, [$categoria, $proyectos]);
+            $proyectos = DB::table('projects')->select('*')->where('id', "=", $categoria->id)->get();
+            array_push($proyectos_out, (object)['categoria' => $categoria, 'proyectos' => $proyectos]);
         }
-        dd($proyectos_out);
+        
         return view('proyectos', ['proyectos' => $proyectos_out]);
     }
 
