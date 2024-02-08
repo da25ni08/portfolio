@@ -9,5 +9,4 @@ class PersonalData extends Model
 {
     use HasFactory;
 
-    protected $table = "personal_datas";
 }
