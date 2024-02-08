@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\PersonalData;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -16,7 +17,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('name');
             $table->integer('percentage');
-            $table->foreignId('personal_data_id');
+            $table->foreignIdFor(PersonalData::class)->constrained();
             $table->string('urlimg')->nullable();
         });
     }
