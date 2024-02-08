@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,16 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $category = new Category();
+        $category->name = "Desarrollo Web";
+        $category->save();
+
+        $category = new Category();
+        $category->name = "Desarrollo de Videojuegos";
+        $category->save();
+
+        $category = new Category();
+        $category->name = "Desarrollo Multiplataforma";
+        $category->save();
     }
 }

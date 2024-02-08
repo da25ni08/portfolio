@@ -17,9 +17,10 @@ return new class extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('description');
-            $table->string('imgurl');
+            $table->string('imgurl')->nullable();
             $table->foreignId('categories_id')->constrained();
-            $table->foreignIdFor(PersonalData::class)->constrained();
+            $table->unsignedBigInteger('personal_data_id');
+            $table->foreign('personal_data_id')->references('id')->on('personal_data');
         });
     }
 
