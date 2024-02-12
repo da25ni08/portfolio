@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProjectController;
+use App\Models\Experience;
+use App\Models\PersonalData;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource('proyectos', ProjectController::class);
+Route::get('/', [PersonalData::class, 'index'])->name('datosPersonales');
+Route::get('contacto', [PersonalData::class, 'contact'])->name('contacto');
+Route::get('experiencia', [Experience::class, 'index'])->name('experiencia');
