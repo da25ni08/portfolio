@@ -5,10 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PersonalData extends Model
+class Experience extends Model
 {
     use HasFactory;
 
-
-    protected $table = 'personal_data';
+    
 }

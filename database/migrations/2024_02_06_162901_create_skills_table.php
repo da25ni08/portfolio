@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\PersonalData;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -11,9 +12,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('personal_data', function (Blueprint $table) {
+        Schema::create('skills', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name');
+            $table->integer('percentage');
+            $table->unsignedBigInteger('personal_data_id');
+            $table->foreign('personal_data_id')->references('id')->on('personal_data');
+            $table->string('urlimg')->nullable();
         });
     }
 
@@ -22,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('personal_data');
+        Schema::dropIfExists('skills');
     }
 };

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Proyect;
-use App\Http\Requests\StoreProyectRequest;
-use App\Http\Requests\UpdateProyectRequest;
+use App\Models\Study;
+use App\Http\Requests\StoreStudyRequest;
+use App\Http\Requests\UpdateStudyRequest;
 
-class ProyectController extends Controller
+class StudyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class ProyectController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreProyectRequest $request)
+    public function store(StoreStudyRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class ProyectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Proyect $proyect)
+    public function show(Study $study)
     {
         //
     }
@@ -43,7 +43,7 @@ class ProyectController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Proyect $proyect)
+    public function edit(Study $study)
     {
         //
     }
@@ -51,7 +51,7 @@ class ProyectController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateProyectRequest $request, Proyect $proyect)
+    public function update(UpdateStudyRequest $request, Study $study)
     {
         //
     }
@@ -59,7 +59,7 @@ class ProyectController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Proyect $proyect)
+    public function destroy(Study $study)
     {
         //
     }
