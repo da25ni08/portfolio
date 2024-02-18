@@ -24,7 +24,7 @@ class ProjectController extends Controller
             array_push($proyectos_out, (object)['categoria' => $categoria, 'proyectos' => $proyectos]);
         }
         
-        return view('proyectos', ['proyectos' => $proyectos_out]);
+        return view('projects', ['proyectos' => $proyectos_out]);
     }
 
     /**

@@ -25,7 +25,7 @@ class ExperienceController extends Controller
             $trabajo = Experience::find($trabajo->experience_id);
         }
         $skills = Skill::all();
-        return view('estudios', ['estudios' => $estudios, 'trabajos' => $trabajos, 'skills' => $skills]);
+        return view('career', ['estudios' => $estudios, 'trabajos' => $trabajos, 'skills' => $skills]);
     }
 
     /**

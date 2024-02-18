@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('genre');
             $table->integer('age');
             $table->string('tel');
+            $table->string('email');
             $table->string('description');
         });
     }

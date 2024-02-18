@@ -16,6 +16,6 @@ class PersonalDataController extends Controller
     }
 
     public function contact() {
-        return view('contactos');
+        return view('contact');
     }
 }
